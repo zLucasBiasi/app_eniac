@@ -12,9 +12,16 @@ export const HomeScreen = ({ navigation }: any) => {
       </Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Contact")}
+        onPress={() => navigation.navigate("contact")}
       >
-        <Text style={styles.buttonText}>Veja os livros</Text>
+        <Text style={styles.buttonText}>Contatos</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate("about")}
+      >
+        <Text style={styles.buttonText}>Sobre</Text>
       </TouchableOpacity>
     </View>
   );
