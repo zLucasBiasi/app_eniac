@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
-import { PrismaClient } from "@prisma/client";
+
 import axios from "axios";
 
 const Suggestion = () => {
@@ -20,9 +20,15 @@ const Suggestion = () => {
         mensagem,
       });
 
-      console.log(response.data); // Aqui você pode lidar com a resposta, se necessário
-
-      Alert.alert("Sugestão enviada com sucesso!");
+      if (response.status === 200) {
+        Alert.alert("Sugestão enviada com sucesso!");
+        // Limpa os campos após o envio bem-sucedido
+        setNome("");
+        setEmail("");
+        setWhatsapp("");
+        setAssunto("");
+        setMensagem("");
+      }
     } catch (error) {
       Alert.alert(
         "Erro ao enviar sugestão. Por favor, tente novamente mais tarde."
@@ -72,6 +78,8 @@ const Suggestion = () => {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "black",
+    color: "white",
     flex: 1,
     justifyContent: "center",
     padding: 16,
@@ -79,11 +87,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
+    color: "white",
+    textAlign: "center",
     marginBottom: 16,
   },
   input: {
     height: 40,
     borderColor: "gray",
+    color: "white",
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8,
@@ -91,6 +102,7 @@ const styles = StyleSheet.create({
   textarea: {
     height: 80,
     borderColor: "gray",
+    color: "white",
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8,

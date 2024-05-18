@@ -1,7 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { View, Text, ScrollView } from "react-native";
-import BookCard from "../components/BookCard"; // Certifique-se que BookCard está adaptado para React Native
+import BookCard from "../components/BookCard";
 import { GET_BOOKS } from "@/services/queries";
 import { styles } from "./styles";
 
@@ -12,7 +12,16 @@ const Books = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Lista de Livros</Text>
+      <Text
+        style={{
+          color: "white",
+          fontSize: 35,
+          textAlign: "center",
+          fontWeight: "bold",
+        }}
+      >
+        Lista de Livros
+      </Text>
       <View style={styles.booksContainer}>
         {data?.booksApi?.map((book: any, index: any) => (
           <BookCard key={index} book={book} />
