@@ -1,17 +1,12 @@
 // BookCard.js
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
-import FastImage from "react-native-fast-image";
 
 const BookCard = ({ book }: any) => {
   return (
     <View style={styles.card}>
       <View style={styles.imageContainer}>
-        <FastImage
-          style={styles.image}
-          source={{ uri: book.image.url, priority: FastImage.priority.high }}
-          resizeMode={FastImage.resizeMode.cover}
-        />
+        <Image style={styles.image} source={{ uri: book.image.url }} />
       </View>
       <View style={styles.content}>
         <View style={styles.textContainer}>
