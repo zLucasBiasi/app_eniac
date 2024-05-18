@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 5,
     flexDirection: "column",
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     marginBottom: 20,
     padding: 16,
   },
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     marginBottom: 8,
+    color:"white"
   },
   description: {
     fontSize: 16,

@@ -53,16 +53,17 @@ export const AboutUs = () => {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: "#000",
     padding: 16,
   },
   imageContainer: {
-    width: "100%", // Not a valid React Native unit, adjust as needed
-    marginTop: 112, // 7rem = 112px
+    alignItems: "center",
+    marginVertical: 20,
   },
   image: {
-    width: "100%",
-    height: "100%",
+    width: "80%",
+    height: 200,
   },
   content: {
     margin: 16,
@@ -80,3 +81,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 });
+
+export default AboutUs;

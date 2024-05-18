@@ -24,7 +24,8 @@ const Books = () => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    paddingTop: 40, // Adiciona espaço no topo para dar margem aos títulos
+    paddingTop: 40, // Adiciona espaço no topo para dar margem aos títuloss
+    backgroundColor:"#000"
   },
   title: {
     fontSize: 24,
@@ -33,6 +34,7 @@ const styles = StyleSheet.create({
   },
   booksContainer: {
     flex: 1,
+    backgroundColor:"#000"
   },
   errorText: {
     color: "red",
